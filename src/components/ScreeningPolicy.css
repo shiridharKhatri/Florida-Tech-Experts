@@ -1,0 +1,46 @@
+.screening-policy {
+  background: white;
+  border-top: 3px solid #a6806a;
+  border-bottom: 3px solid #a6806a;
+}
+
+.policy-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.policy-icon {
+  color: #a6806a;
+  flex-shrink: 0;
+}
+
+.policy-text h2 {
+  color: #222;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.policy-text p {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .policy-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .policy-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .policy-text p {
+    font-size: 1rem;
+  }
+}
