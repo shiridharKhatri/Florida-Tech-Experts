@@ -1,4 +1,4 @@
-"use client"
+
 import { ArrowRight, Shield, Users, Award } from "lucide-react"
 import "./Hero.css"
 

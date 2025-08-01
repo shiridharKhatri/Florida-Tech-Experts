@@ -1,4 +1,3 @@
-"use client"
 
 import { useState } from "react"
 import { User, Mail, Phone, Building, Lock, Bell, CreditCard, Shield, Save } from "lucide-react"
