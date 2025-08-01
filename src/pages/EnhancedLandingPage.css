@@ -54,7 +54,7 @@
 
 /* Hero Section */
 .hero {
-  padding: 120px 0 80px;
+  padding: 60px 0 80px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   position: relative;
   overflow: hidden;
@@ -67,7 +67,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at center, rgba(142, 142, 58, 0.05) 0%, transparent 70%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(142, 142, 58, 0.05) 0%,
+    transparent 70%
+  );
 }
 
 .hero-content {
@@ -627,8 +631,6 @@
   box-shadow: 0 8px 25px rgba(142, 142, 58, 0.3);
 }
 
-
-
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero-content {
@@ -688,7 +690,6 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-
 }
 
 @media (max-width: 640px) {

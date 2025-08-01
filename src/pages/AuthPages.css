@@ -22,8 +22,8 @@
   width: 100%;
   max-width: 480px; /* Increased from 400px */
   border: 1px solid #e5e7eb;
-      margin-top: 130px;
-      margin-bottom: 80px;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .auth-header {
@@ -265,6 +265,7 @@
   font-weight: 500;
   font-size: 0.8rem;
   transition: border-color 0.2s;
+  cursor: pointer;
 }
 
 .social-btn:hover {

@@ -21,7 +21,7 @@ const navigate = useNavigate()
   }
 
   return (
-   <header className="landing-header">
+    <header className="landing-header">
         <div className="container">
           <div className="header-content">
             <div className="logo" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
@@ -47,10 +47,14 @@ const navigate = useNavigate()
             </nav>}
 
             <div className="header-actions">
-              <Link to="/login" className="btn btn-outline">
+              <Link to="/login" className="btn btn-outline" style={{
+                height: "40px",
+              }}>
                 Client Login
               </Link>
-              <Link to="/register" className="btn btn-primary">
+              <Link to="/register" className="btn btn-primary" style={{
+                height: "40px",
+              }}>
                 Get Started
               </Link>
             </div>
