@@ -19,6 +19,7 @@ import {
 import "./EnhancedLandingPage.css"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import HowItWorks from "../components/HowItWorks"
 
 const EnhancedLandingPage = () => {
   const scrollToSection = (sectionId) => {
@@ -134,64 +135,7 @@ const EnhancedLandingPage = () => {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="how-it-works">
-        <div className="container">
-          <div className="section-header">
-            <h2>How Our Trust-Building Process Works</h2>
-            <p>We eliminate risk by proving our capabilities before asking for major commitments</p>
-          </div>
-
-          <div className="process-steps">
-            <div className="step-card">
-              <div className="step-number">1</div>
-              <div className="step-icon">
-                <Zap size={32} />
-              </div>
-              <h3>Small Fix First</h3>
-              <p>
-                We start with a small, low-risk task (usually $50-200) to demonstrate our capabilities and build trust
-                with new clients.
-              </p>
-            </div>
-
-            <div className="step-card">
-              <div className="step-number">2</div>
-              <div className="step-icon">
-                <Target size={32} />
-              </div>
-              <h3>Evaluate & Assess</h3>
-              <p>
-                We assess your satisfaction with our work and evaluate if we're the right fit for your larger project
-                needs.
-              </p>
-            </div>
-
-            <div className="step-card">
-              <div className="step-number">3</div>
-              <div className="step-icon">
-                <Clock size={32} />
-              </div>
-              <h3>Scale to Full Project</h3>
-              <p>
-                Once trust is established, we begin milestone-based work with transparent communication and regular
-                updates.
-              </p>
-            </div>
-
-            <div className="step-card">
-              <div className="step-number">4</div>
-              <div className="step-icon">
-                <Award size={32} />
-              </div>
-              <h3>Satisfaction Guarantee</h3>
-              <p>
-                You only pay when completely satisfied with each milestone. No satisfaction, no payment - it's that
-                simple.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+       <HowItWorks/>
 
       {/* Services Section */}
       <section id="services" className="services">
@@ -393,6 +337,7 @@ const EnhancedLandingPage = () => {
           </div>
         </div>
       </section>
+     
 
       {/* Footer */}
      <Footer/>

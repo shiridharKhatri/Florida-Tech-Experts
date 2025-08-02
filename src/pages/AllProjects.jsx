@@ -216,10 +216,7 @@ const AllProjects = () => {
             </div>
           </div>
 
-          <button className="btn btn-outline">
-            <Filter size={16} />
-            More Filters
-          </button>
+         
         </div>
 
         {/* Projects Grid */}

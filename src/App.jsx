@@ -19,6 +19,7 @@ import Settings from "./pages/Settings"
 // Components
 import ProtectedRoute from "./components/ProtectedRoute"
 import LoadingSpinner from "./components/LoadingSpinner"
+import ScrollToTopLayout from "./components/ScrollToTop"
 
 function App() {
   const { user, loading } = useAuth()
@@ -28,62 +29,64 @@ function App() {
   }
 
   return (
-    <Routes>
-      {/* Public Routes */}
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/home" element={<Navigate to="/" replace />} />
+    <ScrollToTopLayout>
+      <Routes>
+        {/* Public Routes */}
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/home" element={<Navigate to="/" replace />} />
 
-      {/* Auth Routes - Redirect to dashboard if already logged in */}
-      <Route path="/login" element={user ? <Navigate to="/dashboard" replace /> : <LoginPage />} />
-      <Route path="/register" element={user ? <Navigate to="/dashboard" replace /> : <RegisterPage />} />
-      <Route path="/forgot-password" element={user ? <Navigate to="/dashboard" replace /> : <ForgotPasswordPage />} />
+        {/* Auth Routes - Redirect to dashboard if already logged in */}
+        <Route path="/login" element={user ? <Navigate to="/dashboard" replace /> : <LoginPage />} />
+        <Route path="/register" element={user ? <Navigate to="/dashboard" replace /> : <RegisterPage />} />
+        <Route path="/forgot-password" element={user ? <Navigate to="/dashboard" replace /> : <ForgotPasswordPage />} />
 
-      {/* Protected Routes */}
-      <Route
-        path="/dashboard"
-        element={<ProtectedRoute>{user?.role === "admin" ? <AdminDashboard /> : <ClientDashboard />}</ProtectedRoute>}
-      />
+        {/* Protected Routes */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              {user?.role === "admin" ? <AdminDashboard /> : <ClientDashboard />}
+            </ProtectedRoute>
+          }
+        />
 
-      {/* Projects Routes */}
-      <Route
-        path="/projects"
-        element={
-          <ProtectedRoute>
-            <AllProjects />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/project/:id"
-        element={
-          <ProtectedRoute>
-            <ProjectDetails />
-          </ProtectedRoute>
-        }
-      />
+        <Route
+          path="/projects"
+          element={
+            <ProtectedRoute>
+              <AllProjects />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/project/:id"
+          element={
+            <ProtectedRoute>
+              <ProjectDetails />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/payments"
+          element={
+            <ProtectedRoute>
+              <PaymentHistory />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <Settings />
+            </ProtectedRoute>
+          }
+        />
 
-      {/* Other Protected Routes */}
-      <Route
-        path="/payments"
-        element={
-          <ProtectedRoute>
-            <PaymentHistory />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/settings"
-        element={
-          <ProtectedRoute>
-            <Settings />
-          </ProtectedRoute>
-        }
-      />
-
-      {/* Catch all - redirect to home */}
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+        {/* Catch all - redirect to home */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </ScrollToTopLayout>
   )
 }
-
-export default App
+export default App;

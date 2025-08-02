@@ -10,7 +10,7 @@ const AdminDashboard = () => {
   const [clients] = useState([
     {
       id: 1,
-      name: "John Smith",
+      name: "Testing Client",
       email: "client@example.com",
       company: "Tech Startup Inc",
       projects: 3,
@@ -20,8 +20,8 @@ const AdminDashboard = () => {
     },
     {
       id: 2,
-      name: "Sarah Wilson",
-      email: "sarah@company.com",
+      name: "Testing Admin",
+      email: "testing@company.com",
       company: "Wilson Corp",
       projects: 1,
       totalSpent: 2500,
@@ -34,7 +34,7 @@ const AdminDashboard = () => {
     {
       id: 1,
       title: "E-commerce Website Redesign",
-      client: "John Smith",
+      client: "Testing Client",
       status: "completed",
       budget: 5000,
       escrowAmount: 0,
@@ -44,7 +44,7 @@ const AdminDashboard = () => {
     {
       id: 2,
       title: "Landing Page Optimization",
-      client: "John Smith",
+      client: "Testing Admin",
       status: "in-progress",
       budget: 2500,
       escrowAmount: 2500,
@@ -54,7 +54,7 @@ const AdminDashboard = () => {
     {
       id: 3,
       title: "Corporate Website",
-      client: "Sarah Wilson",
+      client: "Testing Client",
       status: "pending",
       budget: 3500,
       escrowAmount: 3500,
